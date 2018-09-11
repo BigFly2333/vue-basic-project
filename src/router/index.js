@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/pages/Index'
-import Login from '@/pages/Login'
+
+// 动态按需加载组件
+const Index = resolve => require(['views/index'], resolve)
+const Login = resolve => require(['views/login/index'], resolve)
 
 Vue.use(Router)
 
